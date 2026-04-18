@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Control & Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Система візуалізації радара</h1>
+
+    <div id="radar-plot"></div>
+
+    <div class="control-panel">
+        <h3>Налаштування радара</h3>
+        <div class="input-group">
+            <label>Вимірювань на оберт:</label>
+            <input type="number" id="measurementsPerRotation" value="360">
+        </div>
+        <div class="input-group">
+            <label>Швидкість обертання (RPM):</label>
+            <input type="number" id="rotationSpeed" value="60">
+        </div>
+        <div class="input-group">
+            <label>Швидкість цілей (км/год):</label>
+            <input type="number" id="targetSpeed" value="100">
+        </div>
+        <button onclick="updateConfig()">Оновити конфігурацію</button>
+    </div>
+
+    <div id="status">Статус: Підключення...</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
